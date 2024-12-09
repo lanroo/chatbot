@@ -34,7 +34,7 @@ cd chatbot
    ```
 3. Inicie o servidor do backend:
    ```bash
-   node chatbot.js
+   npm start
    ```
 4. O backend estará rodando em:
    ```
@@ -74,6 +74,7 @@ cd chatbot
 │   │   ├── 📂 utils/          # Funções auxiliares (validações, helpers)
 │   │   ├── 📝 chatbot.js      # Configuração do cliente WhatsApp
 │   │   └── 📝 app.js          # Configuração principal do servidor Express
+│   ├── .env                   # Variáveis de ambiente
 │   ├── 📂 tests/              # Testes automatizados do backend
 │   ├── 📝 package.json        # Configuração das dependências do backend
 ├── 📂 frontend/               # Frontend do chatbot
@@ -84,7 +85,7 @@ cd chatbot
 │   │   ├── 📂 styles/         # Arquivos de estilo (CSS)
 │   │   └── 📝 App.js          # Componente principal do React
 │   ├── 📝 package.json        # Configuração das dependências do frontend
-└── 📝 README.md               # Documentação geral do projeto                
+└── 📝 README.md               # Documentação geral do projeto
 ```
 
 ---

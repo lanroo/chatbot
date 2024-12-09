@@ -4,3 +4,4 @@ node_modules/
 .local-chromium/
 *.dll
 *.exe
+.env
