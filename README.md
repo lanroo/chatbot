@@ -1,7 +1,7 @@
 
 # **ChatBot**
 
-**ChatBot** é um projeto que integra um chatbot no WhatsApp usando `whatsapp-web.js` e fornece uma interface frontend com React para facilitar o uso.
+**ChatBot** é um projeto que integra um chatbot no WhatsApp usando `whatsapp-web.js` no backend e fornece uma interface frontend com React para facilitar o uso. O projeto está estruturado para ser modular, escalável e fácil de usar.
 
 ---
 
@@ -65,14 +65,26 @@ cd chatbot
 
 ## **Estrutura do Projeto**
 ```plaintext
-project-root/
-├── backend/
-│   ├── chatbot.js        # Arquivo principal do backend
-│   ├── package.json      # Configuração do backend
-├── frontend/
-│   ├── src/              # Código do frontend
-│   ├── package.json      # Configuração do frontend
-└── README.md             # Documentação do projeto
+📦 chatbot/
+├── 📂 backend/                # Backend do chatbot
+│   ├── 📂 src/                # Código principal do backend
+│   │   ├── 📂 controllers/    # Controladores das rotas do backend
+│   │   ├── 📂 services/       # Lógica principal e serviços do WhatsApp
+│   │   ├── 📂 routes/         # Definição das rotas da API
+│   │   ├── 📂 utils/          # Funções auxiliares (validações, helpers)
+│   │   ├── 📝 chatbot.js      # Configuração do cliente WhatsApp
+│   │   └── 📝 app.js          # Configuração principal do servidor Express
+│   ├── 📂 tests/              # Testes automatizados do backend
+│   ├── 📝 package.json        # Configuração das dependências do backend
+├── 📂 frontend/               # Frontend do chatbot
+│   ├── 📂 public/             # Arquivos estáticos públicos
+│   │   └── 📝 index.html      # Entrada HTML principal do React
+│   ├── 📂 src/                # Código principal do frontend
+│   │   ├── 📂 components/     # Componentes React reutilizáveis
+│   │   ├── 📂 styles/         # Arquivos de estilo (CSS)
+│   │   └── 📝 App.js          # Componente principal do React
+│   ├── 📝 package.json        # Configuração das dependências do frontend
+└── 📝 README.md               # Documentação geral do projeto                
 ```
 
 ---
@@ -84,10 +96,18 @@ project-root/
 
 ---
 
+## **Principais Funcionalidades**
+- Geração e leitura de QR Code para autenticação do WhatsApp.
+- Respostas automáticas baseadas em comandos predefinidos.
+- Integração com uma interface React para exibir o QR Code e permitir interações.
+
+---
+
 ## **Próximos Passos**
-- Melhorar a documentação com mais detalhes sobre as funcionalidades.
 - Adicionar autenticação para proteger os endpoints da API.
-- Publicar no npm para facilitar o uso como biblioteca.
+- Melhorar a interface de interação com o chatbot no frontend.
+- Publicar a biblioteca no npm para facilitar o uso como pacote.
+- Implementar suporte a grupos e envio de mensagens em massa.
 
 ---
 
