@@ -17,8 +17,8 @@ Certifique-se de que você tem as seguintes ferramentas instaladas:
 ### **2. Clone o repositório**
 Se você ainda não clonou o projeto, faça isso com:
 ```bash
-git clone <link-do-seu-repositorio>
-cd <nome-do-repositorio>
+git clone https://github.com/lanroo/chatbot.git
+cd chatbot
 ```
 
 ---
