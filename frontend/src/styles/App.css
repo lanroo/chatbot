@@ -1,9 +1,20 @@
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --bg-color: #f4f4f9;
+  --text-color: #555;
+  --error-color: red;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: rgba(0, 0, 0, 0.3);
+}
+
 /* Estilização geral */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* Container principal */
@@ -12,7 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f4f9;
+  background-color: var(--bg-color);
 }
 
 /* Caixa de conteúdo */
@@ -20,10 +31,16 @@ body {
   text-align: center;
   padding: 20px;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--box-shadow);
   max-width: 400px;
   width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px var(--box-shadow-hover);
 }
 
 /* QR Code */
@@ -39,14 +56,15 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .reload-button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover);
 }
 
 /* Container do QR Code */
@@ -57,23 +75,45 @@ body {
 /* Interface do Chat */
 .chat-interface {
   margin-top: 20px;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: white;
+  box-shadow: 0 2px 10px var(--box-shadow);
+  transition: box-shadow 0.3s ease;
 }
 
+.chat-interface:hover {
+  box-shadow: 0 4px 15px var(--box-shadow-hover);
+}
 
 /* Mensagem de carregamento */
 .loading {
-  color: #555;
+  color: var(--text-color);
   font-size: 14px;
   margin: 10px 0;
 }
 
 /* Mensagem de erro */
 .error {
-  color: red;
+  color: var(--error-color);
   font-size: 14px;
   margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .content-box {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .reload-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .chat-interface {
+    padding: 10px;
+  }
 }
